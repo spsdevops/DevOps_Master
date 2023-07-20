@@ -18,4 +18,5 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
           gh api octocat
-          curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/try_to_get_me.md
+          curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/hello_master.py >> hello_master.py
+          python hello_master.py
