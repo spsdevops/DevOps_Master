@@ -20,3 +20,9 @@ jobs:
           gh api octocat
           curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/hello_master.py >> hello_master.py
           python hello_master.py
+
+      - name: Hello from slave
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+        run: |
+          echo "hello world"
