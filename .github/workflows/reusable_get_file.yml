@@ -25,4 +25,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
-          echo "hello world"
+          echo "hello SPS!"
